@@ -1,14 +1,9 @@
-import { FaUserCircle } from "react-icons/fa";
-// import useAuth from "../hooks/useAuth";
 import { Link } from "react-router";
-import newLogo from '../assets/new-logo.png'
-import useAuth from "../hooks/useAuth";
-import { useContext } from "react";
-import { PaidContext } from "../Providers/PaidBillsProviders";
+import useAuth from "../../hooks/useAuth";
 
 const Navbar = () => {
     const { user, logOut } = useAuth();
-    const { balance } = useContext(PaidContext);
+    // const { balance } = useContext(PaidContext);
 
 
     const handleLogout = () => {
@@ -63,10 +58,10 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <div className="flex">
-                        {/* <a className="btn btn-ghost text-xl md:text-2xl cinzel ">Richter Restaurant  </a> */}
+                        <a className="btn btn-ghost text-xl md:text-2xl cinzel ">Richter Restaurant  </a>
 
-                        <img src={newLogo} className="w-8 h-8 md:h-auto mt-1 md:mt-0 md:w-12 md:ml-5 rounded-full " alt="" />
-                        <a className="btn btn-ghost text-xl md:text-3xl cinzel text-[#c3921e] hidden md:block">Mari<span className="text-[#0d4827]">Gold</span>  </a>
+                        {/* <img src={newLogo} className="w-8 h-8 md:h-auto mt-1 md:mt-0 md:w-12 md:ml-5 rounded-full " alt="" /> */}
+                        {/* <a className="btn btn-ghost text-xl md:text-3xl cinzel text-[#c3921e] hidden md:block">Mari<span className="text-[#0d4827]">Gold</span>  </a> */}
                         {/* {
                         user?.emailVerified === false ? <button className="btn btn-primary bg-red-600 text-white border-none hover:bg-red-800" onClick={handleVerify}>Verify</button> : ''
                     } */}
@@ -95,7 +90,7 @@ const Navbar = () => {
                                         tabIndex={0}
                                         className="card card-compact dropdown-content bg-base-100 z-1 mt-3 w-52 shadow">
                                         <div className="card-body">
-                                            <span className="text-info text-lg">Balance: {balance} TK</span>
+                                            {/* <span className="text-info text-lg">Balance: {balance} TK</span> */}
                                             <div className="card-actions">
                                                 <button onClick={handleLogout} className="btn btn-primary btn-block bg-[#c3921e] border-none ">Log Out</button>
                                             </div>

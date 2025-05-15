@@ -1,9 +1,9 @@
-import React from 'react';
+import BrandCards from '../../Components/Home/BrandCards';
 
 const Home = () => {
     return (
         <div>
-            <h2 className="card-title">This Your Ex's Home</h2>
+            <BrandCards />
         </div>
     );
 };
